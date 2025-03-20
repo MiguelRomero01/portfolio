@@ -1,10 +1,12 @@
-import Navbar from './components/navbar/navbar'
-import Home from './home/home'
+import Navbar from '@components/navbar/navbar'
+import Home from '@home/home'
+import ParticlesBackground from '@/components/backgroundAnimated/background.js'
 
 function App() {
 	return (
 		<div>
 			<Navbar />
+			<ParticlesBackground />
 
 			<main className="mt-20">
 				<section id="home">

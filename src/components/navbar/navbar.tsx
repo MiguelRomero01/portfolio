@@ -38,7 +38,7 @@ export default function Navbar() {
 	]
 
 	return (
-		<nav className="flex fixed top-0 left-0 w-full justify-center h-16 border-2 border-zinc-800 backdrop-blur-2xl z-50">
+		<nav className="flex fixed top-0 left-0 w-full justify-center h-16 border-2  backdrop-blur-2xl z-50">
 			{/* diseño movil */}
 			{isMobile ? (
 				<div className="w-full px-4 flex justify-between items-center">
@@ -46,8 +46,8 @@ export default function Navbar() {
 						<House className="border-blue-500/30 bg-blue-500/10 text-blue-400 size-11 px-1.5 rounded-3xl transition hover:scale-110 ease-in cursor-pointer" />
 					</Link>
 
-					<button onClick={toggleMenu} className="text-black z-50">
-						{open ? <X className="size-8 text-white" /> : <Menu className="size-8" />}
+					<button onClick={toggleMenu} className="text-white z-50">
+						{open ? <X className="size-8 text-white" /> : <Menu className="size-8 text-white" />}
 					</button>
 
 					{/* Menú móvil desplegable */}
@@ -69,7 +69,7 @@ export default function Navbar() {
 				</div>
 			) : (
 				// diseño web
-				<ul className="flex content-between gap-10 items-center">
+				<ul className="flex content-between gap-10 items-center text-white	">
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="about" smooth={true} duration={500}>
 							about
