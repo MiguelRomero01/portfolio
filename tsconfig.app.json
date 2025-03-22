@@ -32,6 +32,6 @@
 			"@home/*": ["src/home/*"]
 		}
 	},
-	"include": ["src"]
+	"include": ["src", "tailwind.config.js"]
 	// "references": [{ "path": "./tsconfig.node.json" }]
 }

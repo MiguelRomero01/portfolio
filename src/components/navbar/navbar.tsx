@@ -38,7 +38,7 @@ export default function Navbar() {
 	]
 
 	return (
-		<nav className="flex fixed top-0 left-0 w-full justify-center h-16 border-2  backdrop-blur-2xl z-50">
+		<nav className="flex fixed top-0 left-0 w-full justify-center h-16 border-2  backdrop-blur-xs z-50">
 			{/* diseño movil */}
 			{isMobile ? (
 				<div className="w-full px-4 flex justify-between items-center">
