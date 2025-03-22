@@ -8,7 +8,7 @@ function App() {
 			<ParticlesBackground />
 
 			{/* Capa de contenido */}
-			<div className="relative z-10">
+			<div className="relative">
 				<Navbar />
 
 				<main className="mt-20">

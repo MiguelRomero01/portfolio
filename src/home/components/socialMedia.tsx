@@ -12,7 +12,7 @@ export default function SocialMedia() {
 	return (
 		<div className="flex gap-5 justify-center mt-4">
 			{socialMediaArray.map((item) => (
-				<a href={item.link}>
+				<a href={item.link} key={item.label}>
 					<img
 						src={item.Icon}
 						title={item.label}

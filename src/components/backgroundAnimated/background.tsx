@@ -1,16 +1,12 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import type { Container, Engine } from 'tsparticles-engine'
+import type { Engine } from 'tsparticles-engine'
 import { ISourceOptions } from 'tsparticles-engine'
 
 const ParticlesBackground: React.FC = () => {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadFull(engine)
-	}, [])
-
-	const particlesLoaded = useCallback(async (container: Container | undefined) => {
-		console.log('Particles container loaded:', container)
 	}, [])
 
 	const options: ISourceOptions = {
@@ -44,10 +40,10 @@ const ParticlesBackground: React.FC = () => {
 				value: 0.5,
 				random: false,
 				anim: {
-					enable: false,
+					enable: true,
 					speed: 1,
 					opacity_min: 0.1,
-					sync: false,
+					sync: true,
 				},
 			},
 			size: {
@@ -83,7 +79,7 @@ const ParticlesBackground: React.FC = () => {
 			},
 		},
 		interactivity: {
-			detectsOn: 'canvas',
+			detectsOn: 'window',
 			events: {
 				onHover: {
 					enable: true,
@@ -128,13 +124,11 @@ const ParticlesBackground: React.FC = () => {
 		},
 		fullScreen: {
 			enable: true,
-			zIndex: -1,
+			zIndex: 0,
 		},
 	}
 
-	return (
-		<Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={options} />
-	)
+	return <Particles id="tsparticles" init={particlesInit} options={options} />
 }
 
 export default ParticlesBackground
