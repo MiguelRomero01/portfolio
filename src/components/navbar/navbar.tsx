@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
 //animations
-import { animationProps } from '@/controllers/animations/animationProps'
+import { animationPropsHome } from '@/controllers/animations/animationProps'
 import 'aos/dist/aos.css'
 
 export default function Navbar() {
@@ -43,10 +43,10 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className="flex fixed top-0 left-0 w-full justify-center border-2 backdrop-blur-xs z-50"
-			data-aos={animationProps.navbar.Animation}
-			data-aos-delay={animationProps.navbar.Delay}
-			data-aos-duration={animationProps.navbar.Duration}
+			className="flex fixed top-0 left-0 w-full justify-center border-2 backdrop-blur-xs z-50 shadow-lg shadow-gray-800/50"
+			data-aos={animationPropsHome.navbar.Animation}
+			data-aos-delay={animationPropsHome.navbar.Delay}
+			data-aos-duration={animationPropsHome.navbar.Duration}
 		>
 			{/* diseño movil */}
 			{isMobile ? (
@@ -102,7 +102,7 @@ export default function Navbar() {
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="services" smooth={true} duration={500}>
-							Expertise
+							expertise
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">

@@ -13,7 +13,7 @@ import TailwindLogo from '@assets/svg/technologies/tailwind.svg'
 import { useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { animationProps } from '@/controllers/animations/animationProps'
+import { animationPropsHome } from '@/controllers/animations/animationProps'
 
 export default function TechBar() {
 	const [isDivVisible, setIsDivVisible] = useState(false)
@@ -23,7 +23,7 @@ export default function TechBar() {
 		const timer = setTimeout(() => {
 			setIsDivVisible(true)
 			AOS.refresh()
-		}, animationProps.techBar.Delay)
+		}, animationPropsHome.techBar.Delay)
 
 		return () => clearTimeout(timer)
 	}, [])
@@ -52,9 +52,9 @@ export default function TechBar() {
 					techLogos.map((item, index) => (
 						<li
 							key={item.name}
-							data-aos={animationProps.techBarElements.Animation}
+							data-aos={animationPropsHome.techBarElements.Animation}
 							data-aos-delay={index * 100}
-							data-aos-duration={animationProps.techBarElements.Duration}
+							data-aos-duration={animationPropsHome.techBarElements.Duration}
 							className="flex items-center justify-center m-1"
 						>
 							<img

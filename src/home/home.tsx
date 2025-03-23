@@ -3,16 +3,26 @@ import { useState, useEffect } from 'react'
 //assets
 import styleFonts from '@assets/fonts.module.css'
 import { ArrowRight } from 'lucide-react'
+
 //components
 import SocialMedia from './components/socialMedia'
 import TechBar from './components/techBar'
 
-export default function Home() {
-	const [softwareText, setSoftwareText] = useState('')
-	const [developerText, setDeveloperText] = useState('')
-	const softwareFull = 'SOFTWARE'
-	const developerFull = 'DEVELOPER'
+//aniamtion
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { animationPropsHome } from '@/controllers/animations/animationProps'
 
+export default function Home() {
+	const [isDivVisible, setIsDivVisible] = useState<boolean>(false)
+
+	//animated text
+	const [softwareText, setSoftwareText] = useState<string>('')
+	const [developerText, setDeveloperText] = useState<string>('')
+	const softwareFull: string = 'SOFTWARE'
+	const developerFull: string = 'DEVELOPER'
+
+	//text animation
 	useEffect(() => {
 		// Función para animar la escritura de texto
 		const animateText = (text: string, setter: (value: string) => void, delay: number) => {
@@ -30,6 +40,16 @@ export default function Home() {
 		setTimeout(() => {
 			animateText(developerFull, setDeveloperText, 130)
 		}, softwareFull.length * 130 + 200)
+	}, [])
+
+	//button animation delay
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsDivVisible(true)
+			AOS.refresh()
+		}, animationPropsHome.buttonAnimated.Delay)
+
+		return () => clearTimeout(timer)
 	}, [])
 
 	return (
@@ -50,14 +70,20 @@ export default function Home() {
 				<TechBar />
 
 				{/* get started button */}
-				<div className="flex justify-center py-5">
-					<button className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-						<a href="#" className="flex items-center space-x-2">
-							<span>Get Started</span>
-							<ArrowRight />
-						</a>
-					</button>
-				</div>
+				{isDivVisible && (
+					<div className="flex justify-center py-5">
+						<button
+							data-aos={animationPropsHome.buttonAnimated.Animation}
+							data-aos-duration={animationPropsHome.buttonAnimated.Duration}
+							className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+						>
+							<a href="#" className="flex items-center space-x-2">
+								<span>Get Started</span>
+								<ArrowRight />
+							</a>
+						</button>
+					</div>
+				)}
 			</div>
 
 			<SocialMedia />
