@@ -28,9 +28,10 @@ function App() {
 				</header>
 
 				<main className="mt-20">
-					<section id="home" className="flex justify-center">
+					<section id="home" className="flex justify-center h-[85vh]">
 						<Home />
 					</section>
+
 					<section id="about"></section>
 					<section id="services"></section>
 					<section id="education"></section>
