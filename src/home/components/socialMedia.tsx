@@ -8,7 +8,7 @@ import Email from '@assets/svg/socialMedia/email.svg'
 //animations
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { animationProps } from '@/controllers/animations/animationProps'
+import { animationPropsHome } from '@/controllers/animations/animationProps'
 
 export default function SocialMedia() {
 	const [isDivVisible, setIsDivVisible] = useState<boolean>(false)
@@ -17,7 +17,7 @@ export default function SocialMedia() {
 		const timer = setTimeout(() => {
 			setIsDivVisible(true)
 			AOS.refresh()
-		}, animationProps.socialMedia.Delay)
+		}, animationPropsHome.socialMedia.Delay)
 		return () => clearTimeout(timer)
 	}, [])
 
@@ -34,10 +34,10 @@ export default function SocialMedia() {
 					<a
 						href={item.link}
 						key={item.label}
-						data-aos={animationProps.socialMedia.Animation}
+						data-aos={animationPropsHome.socialMedia.Animation}
 						data-aos-delay={index * 100}
-						data-aos-duration={animationProps.socialMedia.Duration}
-						data-aos-easing={animationProps.socialMedia.easing}
+						data-aos-duration={animationPropsHome.socialMedia.Duration}
+						data-aos-easing={animationPropsHome.socialMedia.easing}
 					>
 						<img
 							src={item.Icon}
