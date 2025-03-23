@@ -2,6 +2,8 @@ import { House, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
+//animations
+import { animationProps } from '@/controllers/animations/animationProps'
 import 'aos/dist/aos.css'
 
 export default function Navbar() {
@@ -32,9 +34,9 @@ export default function Navbar() {
 
 	const menuItems = [
 		{ to: 'about', label: 'about' },
-		{ to: 'services', label: 'services' },
 		{ to: 'education', label: 'education' },
 		{ to: 'soft-skills', label: 'soft-skills' },
+		{ to: 'expertise', label: 'expertise' },
 		{ to: 'projects', label: 'projects' },
 		{ to: 'contact', label: 'contact' },
 	]
@@ -42,7 +44,9 @@ export default function Navbar() {
 	return (
 		<nav
 			className="flex fixed top-0 left-0 w-full justify-center border-2 backdrop-blur-xs z-50"
-			data-aos="fade-down"
+			data-aos={animationProps.navbar.Animation}
+			data-aos-delay={animationProps.navbar.Delay}
+			data-aos-duration={animationProps.navbar.Duration}
 		>
 			{/* diseño movil */}
 			{isMobile ? (
@@ -81,13 +85,14 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
-						<Link to="services" smooth={true} duration={500}>
-							services
-						</Link>
-					</li>
-					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="education" smooth={true} duration={500}>
 							education
+						</Link>
+					</li>
+
+					<li className="text-lg transition hover:scale-110 cursor-pointer">
+						<Link to="soft-skills" smooth={true} duration={500}>
+							soft-skills
 						</Link>
 					</li>
 					<li>
@@ -96,8 +101,8 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
-						<Link to="soft-skills" smooth={true} duration={500}>
-							soft-skills
+						<Link to="services" smooth={true} duration={500}>
+							Expertise
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">

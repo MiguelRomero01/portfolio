@@ -3,8 +3,6 @@ import SocialMedia from './components/socialMedia'
 import TechBar from './components/techBar'
 import styleFonts from '@assets/fonts.module.css'
 
-import 'aos/dist/aos.css'
-
 export default function Home() {
 	const [softwareText, setSoftwareText] = useState('')
 	const [developerText, setDeveloperText] = useState('')
@@ -31,17 +29,19 @@ export default function Home() {
 	}, [])
 
 	return (
-		<div className="items-center justify-center text-white">
-			<div className="text-center text-[800%] font-bold">
-				<p id={styleFonts.MainTitle} className="pr-20">
-					{softwareText}
-				</p>
-				<p id={styleFonts.MainTitle} className="pl-20">
-					{developerText}
-				</p>
+		<>
+			<div className="items-center justify-center text-white">
+				<div className="text-center text-[800%] font-bold">
+					<p id={styleFonts.MainTitle} className="pr-20">
+						{softwareText}
+					</p>
+					<p id={styleFonts.MainTitle} className="pl-20">
+						{developerText}
+					</p>
+				</div>
+				<TechBar />
 			</div>
-			<TechBar />
 			<SocialMedia />
-		</div>
+		</>
 	)
 }

@@ -9,10 +9,24 @@ import GitLogo from '@assets/svg/technologies/gits.svg'
 import HtmlLogo from '@assets/svg/technologies/html.svg'
 import ReactLogo from '@assets/svg/technologies/react.svg'
 import TailwindLogo from '@assets/svg/technologies/tailwind.svg'
-
+import { useEffect, useState } from 'react'
+import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { animationProps } from '@/controllers/animations/animationProps'
 
 export default function TechBar() {
+	const [isDivVisible, setIsDivVisible] = useState<boolean>(false)
+
+	// Simular carga del div con una pequeña demora
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsDivVisible(true)
+			AOS.refresh() // Refrescar AOS después de cambiar el estado
+		}, animationProps.techBar.Delay) // Ajusta el tiempo según la animación del div principal
+
+		return () => clearTimeout(timer)
+	}, [])
+
 	const techLogos = [
 		{ name: 'Python', Logo: PythonLogo },
 		{ name: 'Java', Logo: JavaLogo },
@@ -27,18 +41,28 @@ export default function TechBar() {
 	]
 
 	return (
-		<div className="max-w-max py-3 px-5 border-2 border-[#202126] bg-[#202126] rounded-4xl justify-self-center">
+		<div
+			className={`max-w-max py-3 px-5 border-2 border-[#202126] bg-[#202126] rounded-4xl justify-self-center transition-opacity duration-500 ${
+				isDivVisible ? 'opacity-100' : 'opacity-0'
+			}`}
+		>
 			<ul className="flex gap-10">
-				{techLogos.map((item, index) => (
-					<li
-						key={item.name}
-						className="transition hover:scale-110 ease-in cursor-pointer"
-						data-aos="fade-left"
-						data-aos-delay={index * 100}
-					>
-						<img src={item.Logo} width={45} alt={item.name} title={item.name} />
-					</li>
-				))}
+				{isDivVisible &&
+					techLogos.map((item, index) => (
+						<li
+							key={item.name}
+							data-aos={animationProps.techBarElements.Animation}
+							data-aos-delay={index * 100}
+							data-aos-duration={animationProps.techBarElements.Duration}
+						>
+							<img
+								src={item.Logo}
+								alt={item.name}
+								title={item.name}
+								className="transition ease-in hover:scale-110 w-12"
+							/>
+						</li>
+					))}
 			</ul>
 		</div>
 	)
