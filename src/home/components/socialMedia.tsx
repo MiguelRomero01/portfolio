@@ -22,9 +22,9 @@ export default function SocialMedia() {
 	}, [])
 
 	const socialMediaArray = [
-		{ label: 'Linkedin', Icon: Linkedin, link: '' },
 		{ label: 'Github', Icon: GitHub, link: '' },
 		{ label: 'Email', Icon: Email, link: '' },
+		{ label: 'Linkedin', Icon: Linkedin, link: '' },
 	]
 
 	return (
@@ -43,7 +43,7 @@ export default function SocialMedia() {
 							src={item.Icon}
 							title={item.label}
 							alt={item.label}
-							className="size-10 transition ease-in hover:scale-115 mb-3"
+							className="size-9 ease-in hover:bg-white/20  hover:scale-110 transition mb-3 rounded-full bg-white/10 p-1"
 						/>
 					</a>
 				))}
