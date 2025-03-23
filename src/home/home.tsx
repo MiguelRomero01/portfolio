@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
+
+//assets
+import styleFonts from '@assets/fonts.module.css'
+
+//components
 import SocialMedia from './components/socialMedia'
 import TechBar from './components/techBar'
-import styleFonts from '@assets/fonts.module.css'
 
 export default function Home() {
 	const [softwareText, setSoftwareText] = useState('')
@@ -31,11 +35,11 @@ export default function Home() {
 	return (
 		<>
 			<div className="items-center justify-center text-white">
-				<div className="text-center text-[800%] font-bold">
-					<p id={styleFonts.MainTitle} className="pr-20">
+				<div className="text-center font-bold text-[300%] md:text-[400%] lg:text-[800%]">
+					<p id={styleFonts.MainTitle} className="">
 						{softwareText}
 					</p>
-					<p id={styleFonts.MainTitle} className="pl-20">
+					<p id={styleFonts.MainTitle} className="">
 						{developerText}
 					</p>
 				</div>
