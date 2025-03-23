@@ -2,6 +2,8 @@ import { House, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
+import 'aos/dist/aos.css'
+
 export default function Navbar() {
 	const [open, setOpen] = useState<boolean>(false)
 	const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -38,7 +40,10 @@ export default function Navbar() {
 	]
 
 	return (
-		<nav className="flex fixed top-0 left-0 w-full justify-center h-16 border-2  backdrop-blur-xs z-50">
+		<nav
+			className="flex fixed top-0 left-0 w-full justify-center border-2 backdrop-blur-xs z-50"
+			data-aos="fade-down"
+		>
 			{/* diseño movil */}
 			{isMobile ? (
 				<div className="w-full px-4 flex justify-between items-center">
@@ -69,7 +74,7 @@ export default function Navbar() {
 				</div>
 			) : (
 				// diseño web
-				<ul className="flex content-between gap-10 items-center text-white	">
+				<ul className="flex content-between gap-10 items-center text-white">
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="about" smooth={true} duration={500}>
 							about

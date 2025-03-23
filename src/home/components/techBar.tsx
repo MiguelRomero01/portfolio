@@ -10,6 +10,8 @@ import HtmlLogo from '@assets/svg/technologies/html.svg'
 import ReactLogo from '@assets/svg/technologies/react.svg'
 import TailwindLogo from '@assets/svg/technologies/tailwind.svg'
 
+import 'aos/dist/aos.css'
+
 export default function TechBar() {
 	const techLogos = [
 		{ name: 'Python', Logo: PythonLogo },
@@ -23,11 +25,17 @@ export default function TechBar() {
 		{ name: 'Tailwind', Logo: TailwindLogo },
 		{ name: 'Jupyter', Logo: JupyterLogo },
 	]
+
 	return (
 		<div className="max-w-max py-3 px-5 border-2 border-[#202126] bg-[#202126] rounded-4xl justify-self-center">
 			<ul className="flex gap-10">
-				{techLogos.map((item) => (
-					<li key={item.name} className="transition hover:scale-110 ease-in cursor-pointer ">
+				{techLogos.map((item, index) => (
+					<li
+						key={item.name}
+						className="transition hover:scale-110 ease-in cursor-pointer"
+						data-aos="fade-left"
+						data-aos-delay={index * 100}
+					>
 						<img src={item.Logo} width={45} alt={item.name} title={item.name} />
 					</li>
 				))}
