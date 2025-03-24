@@ -1,6 +1,6 @@
-import Navbar from '@components/navbar/navbar'
-import Home from '@home/home'
-import ParticlesBackground from '@/components/backgroundAnimated/background.js'
+import Navbar from '@/views/components/navbar/navbar'
+import Home from '@/views/home/home'
+import ParticlesBackground from '@/views/components/backgroundAnimated/background.js'
 
 import 'aos/dist/aos.css'
 import AOS from 'aos'
@@ -28,7 +28,7 @@ function App() {
 				</header>
 
 				<main className="mt-20">
-					<section id="home" className="flex justify-center h-[85vh]">
+					<section id="home" className="flex justify-center">
 						<Home />
 					</section>
 

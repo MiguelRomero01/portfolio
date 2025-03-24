@@ -28,8 +28,14 @@
 		"paths": {
 			"@/*": ["src/*"],
 			"@assets/*": ["src/assets/*"],
-			"@components/*": ["src/components/*"],
-			"@home/*": ["src/home/*"]
+			"@components/*": ["src/views/components/*"],
+			"@home/*": ["src/views/home/*"],
+			"@about/*": ["src/views/about/*"],
+			"@expertise/*": ["src/views/expertise/*"],
+			"@projects/*": ["src/views/projects/*"],
+			"@softSkills/*": ["src/views/softSkills/*"],
+			"@education/*": ["src/views/education/*"],
+			"@contact/*": ["src/views/contact/*"]
 		}
 	},
 	"include": ["src", "tailwind.config.js"]
