@@ -12,6 +12,7 @@ import TechBar from './components/techBar'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { animationPropsHome } from '@/controllers/animations/animationProps'
+import { Link } from 'react-scroll'
 
 export default function Home() {
 	const [isDivVisible, setIsDivVisible] = useState<boolean>(false)
@@ -75,12 +76,12 @@ export default function Home() {
 						<button
 							data-aos={animationPropsHome.buttonAnimated.Animation}
 							data-aos-duration={animationPropsHome.buttonAnimated.Duration}
-							className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+							className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
 						>
-							<a href="#" className="flex items-center space-x-2">
+							<Link to="about" smooth={true} duration={500} className="flex items-center space-x-2">
 								<span>Get Started</span>
 								<ArrowRight />
-							</a>
+							</Link>
 						</button>
 					</div>
 				)}
