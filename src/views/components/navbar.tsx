@@ -33,12 +33,12 @@ export default function Navbar() {
 	};
 
 	const menuItems = [
-		{ to: 'about', label: 'about' },
-		{ to: 'education', label: 'education' },
-		{ to: 'soft-skills', label: 'soft-skills' },
-		{ to: 'expertise', label: 'expertise' },
-		{ to: 'projects', label: 'projects' },
-		{ to: 'contact', label: 'contact' },
+		{ to: 'about', label: 'About' },
+		{ to: 'education', label: 'Education' },
+		{ to: 'soft-skills', label: 'Soft-skills' },
+		{ to: 'expertise', label: 'Expertise' },
+		{ to: 'projects', label: 'Projects' },
+		{ to: 'contact', label: 'Contact' },
 	];
 
 	return (
@@ -81,18 +81,18 @@ export default function Navbar() {
 				<ul className="flex content-between gap-10 items-center text-white">
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="about" smooth={true} duration={500}>
-							about
+							About
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="education" smooth={true} duration={500}>
-							education
+							Education
 						</Link>
 					</li>
 
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="soft-skills" smooth={true} duration={500}>
-							soft-skills
+							Soft-skills
 						</Link>
 					</li>
 					<li>
@@ -102,17 +102,17 @@ export default function Navbar() {
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="expertise" smooth={true} duration={500}>
-							expertise
+							Expertise
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="projects" smooth={true} duration={500}>
-							projects
+							Projects
 						</Link>
 					</li>
 					<li className="text-lg transition hover:scale-110 cursor-pointer">
 						<Link to="contact" smooth={true} duration={500}>
-							contact
+							Contact
 						</Link>
 					</li>
 				</ul>
