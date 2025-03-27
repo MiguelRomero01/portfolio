@@ -6,16 +6,11 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import About from './views/about/about';
+import ContactView from './views/contact/contact';
 
 function App() {
 	useEffect(() => {
-		AOS.init({
-			once: true,
-		});
-
-		setTimeout(() => {
-			AOS.refresh();
-		}, 1);
+		AOS.init();
 	}, []);
 
 	return (
@@ -44,7 +39,9 @@ function App() {
 					<section id="education"></section>
 					<section id="soft-skills"></section>
 					<section id="projects"></section>
-					<section id="contact"></section>
+					<section id="contact" className="mt-500 mb-100">
+						<ContactView />
+					</section>
 				</main>
 			</div>
 		</div>

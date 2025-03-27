@@ -1,57 +1,55 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 //assets
-import styleFonts from '@assets/fonts.module.css'
-import { ArrowRight } from 'lucide-react'
+import styleFonts from '@assets/fonts.module.css';
+import { ArrowRight } from 'lucide-react';
 
 //components
-import SocialMedia from './components/socialMedia'
-import TechBar from './components/techBar'
+import SocialMedia from './components/socialMedia';
+import TechBar from './components/techBar';
 
 //aniamtion
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { animationPropsHome } from '@/controllers/animations/animationProps'
-import { Link } from 'react-scroll'
+import 'aos/dist/aos.css';
+import { animationPropsHome } from '@/controllers/animations/animationProps';
+import { Link } from 'react-scroll';
 
 export default function Home() {
-	const [isDivVisible, setIsDivVisible] = useState<boolean>(false)
+	const [isDivVisible, setIsDivVisible] = useState<boolean>(false);
 
 	//animated text
-	const [softwareText, setSoftwareText] = useState<string>('')
-	const [developerText, setDeveloperText] = useState<string>('')
-	const softwareFull: string = 'SOFTWARE'
-	const developerFull: string = 'DEVELOPER'
+	const [softwareText, setSoftwareText] = useState<string>('');
+	const [developerText, setDeveloperText] = useState<string>('');
+	const softwareFull: string = 'SOFTWARE';
+	const developerFull: string = 'DEVELOPER';
 
 	//text animation
 	useEffect(() => {
 		// Función para animar la escritura de texto
 		const animateText = (text: string, setter: (value: string) => void, delay: number) => {
-			let currentText = '' // Mantiene el estado actual del texto dentro del useEffect
+			let currentText = ''; // Mantiene el estado actual del texto dentro del useEffect
 			text.split('').forEach((char, index) => {
 				setTimeout(() => {
-					currentText += char
-					setter(currentText) // Se actualiza con el texto acumulado manualmente
-				}, delay * index)
-			})
-		}
+					currentText += char;
+					setter(currentText); // Se actualiza con el texto acumulado manualmente
+				}, delay * index);
+			});
+		};
 
-		animateText(softwareFull, setSoftwareText, 130)
+		animateText(softwareFull, setSoftwareText, 130);
 
 		setTimeout(() => {
-			animateText(developerFull, setDeveloperText, 130)
-		}, softwareFull.length * 130 + 200)
-	}, [])
+			animateText(developerFull, setDeveloperText, 130);
+		}, softwareFull.length * 130 + 200);
+	}, []);
 
 	//button animation delay
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			setIsDivVisible(true)
-			AOS.refresh()
-		}, animationPropsHome.buttonAnimated.Delay)
+			setIsDivVisible(true);
+		}, animationPropsHome.buttonAnimated.Delay);
 
-		return () => clearTimeout(timer)
-	}, [])
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
 		<>
@@ -73,21 +71,27 @@ export default function Home() {
 				{/* get started button */}
 				{isDivVisible && (
 					<div className="flex justify-center py-5">
-						<button
-							data-aos={animationPropsHome.buttonAnimated.Animation}
-							data-aos-duration={animationPropsHome.buttonAnimated.Duration}
-							className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+						<Link
+							to="about"
+							smooth={true}
+							duration={500}
+							offset={-50}
+							className="flex items-center space-x-2"
 						>
-							<Link to="about" smooth={true} duration={500} className="flex items-center space-x-2">
-								<span>Get Started</span>
+							<button
+								data-aos={animationPropsHome.buttonAnimated.Animation}
+								data-aos-duration={animationPropsHome.buttonAnimated.Duration}
+								className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+							>
+								Get Started
 								<ArrowRight />
-							</Link>
-						</button>
+							</button>
+						</Link>
 					</div>
 				)}
 			</div>
 
 			<SocialMedia />
 		</>
-	)
+	);
 }
