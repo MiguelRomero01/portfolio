@@ -6,6 +6,7 @@ import ContentTracker from './components/contentTracker';
 // Animations
 import 'aos/dist/aos.css';
 import { animationPropsAbout } from '@/controllers/animations/animationProps';
+import SecondTitle from '../components/secondMainTitle';
 
 export default function About() {
 	const { image, mainText, tracks } = animationPropsAbout;
@@ -32,9 +33,7 @@ export default function About() {
 					data-aos-duration={mainText.Duration}
 				>
 					<SectionTitle color="#e8e" backgroundColor="rgba(238, 51, 238, 0.150)" text="About Me" />
-					<h2 className="font-bold text-white text-4xl my-6">
-						Passionate about technology and learning
-					</h2>
+					<SecondTitle title="Passionate about technology and learning" />
 					<p className="text-gray-400 text-[1.1rem]">
 						Hi, I'm Miguel Romero, a 19-year-old software engineering student. Throughout my
 						studies, I've worked on multiple projects that have allowed me to deepen my
