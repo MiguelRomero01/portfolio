@@ -9,7 +9,7 @@ export const animationPropsHome = {
 
 //about section
 export const animationPropsAbout = {
-	image: { Animation: 'fade-up', Duration: 0, Delay: 0 },
-	mainText: { Animation: 'zoom-in', Duration: 0, Delay: 0 },
-	tracks: { Animation: 'flip-left', Duration: 0, Delay: 0 },
+	image: { Animation: 'fade-up', Duration: 500, Delay: 0 },
+	mainText: { Animation: 'zoom-in', Duration: 500, Delay: 0 },
+	tracks: { Animation: 'flip-left', Duration: 600, Delay: 0 },
 };

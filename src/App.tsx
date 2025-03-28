@@ -7,6 +7,7 @@ import AOS from 'aos';
 import { useEffect } from 'react';
 import About from './views/about/about';
 import ContactView from './views/contact/contact';
+import EducationView from './views/education/education';
 
 function App() {
 	useEffect(() => {
@@ -25,19 +26,21 @@ function App() {
 
 				<main className="mt-20">
 					{/*Home section*/}
-					<section id="home" className="flex justify-center h-[90vh] pt-15">
+					<section id="home" className="flex justify-center min-h-screen pt-15 mb-10">
 						<Home />
 					</section>
 
 					{/*About section*/}
-					<section id="about" className="h-[100vh]">
+					<section id="about" className="min-h-screen mb-50">
 						<About />
 					</section>
 
 					{/*expertise section*/}
-					<section id="expertise"></section>
-					<section id="education"></section>
+					<section id="education" className="min-h-screen mb-50">
+						<EducationView />
+					</section>
 					<section id="soft-skills"></section>
+					<section id="expertise"></section>
 					<section id="projects"></section>
 					<section id="contact" className="mt-500 mb-100">
 						<ContactView />
