@@ -36,7 +36,7 @@ const CardEducation: React.FC<CardEducationProps> = ({
 						<div className="flex justify-between w-full">
 							<div className="items-center flex">
 								<CircleAlert className="text-amber-500 mr-2 size-5.5" />
-								<span>Verified</span>
+								<span>In process</span>
 							</div>
 							<span>{date}</span>
 						</div>

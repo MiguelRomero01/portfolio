@@ -1,11 +1,17 @@
 //assets
 import { Award, School } from 'lucide-react';
+
 //components
 import CardEducation from './components/card';
 import SectionTitle from '../components/sectionTitle';
 import SecondTitle from '../components/secondMainTitle';
 
+//animations
+import 'aos/dist/aos.css';
+import { animationPropsEducation } from '@/controllers/animations/animationProps';
+
 export default function EducationView() {
+	const { mainText, education } = animationPropsEducation;
 	const contentEducation = [
 		{
 			title: 'Sofware engineering',
@@ -40,8 +46,13 @@ export default function EducationView() {
 	];
 
 	return (
-		<div className="">
-			<header className="flex flex-col items-center text-[1rem] mx-5 lg:mx-100">
+		<div>
+			<header
+				className="flex flex-col text-center items-center text-[1rem] mx-5 lg:mx-100"
+				data-aos={mainText.Animation}
+				data-aos-duration={mainText.Duration}
+				data-aos-delay={mainText.Delay}
+			>
 				<SectionTitle backgroundColor="#25a1cb21" color="#25a1cbd0" text="Education" />
 				<SecondTitle title="Continuous Education" />
 				<span className="text-gray-300/80 text-center">
@@ -52,15 +63,21 @@ export default function EducationView() {
 			</header>
 			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-30 mt-20">
 				{contentEducation.map((item, index) => (
-					<CardEducation
-						key={index}
-						title={item.title}
-						icon={item.icon}
-						available={item.available}
-						issuer={item.issuer}
-						date={item.date}
-						link={item.link}
-					/>
+					<div
+						data-aos={education.Animation}
+						data-aos-duration={education.Duration}
+						data-aos-delay={index * 200}
+					>
+						<CardEducation
+							key={index}
+							title={item.title}
+							icon={item.icon}
+							available={item.available}
+							issuer={item.issuer}
+							date={item.date}
+							link={item.link}
+						/>
+					</div>
 				))}
 			</section>
 		</div>

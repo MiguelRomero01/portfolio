@@ -2,11 +2,11 @@
 import aboutMe_Img from '@assets/images/about-me.jpg';
 import SectionTitle from '../components/sectionTitle';
 import ContentTracker from './components/contentTracker';
+import SecondTitle from '../components/secondMainTitle';
 
 // Animations
 import 'aos/dist/aos.css';
 import { animationPropsAbout } from '@/controllers/animations/animationProps';
-import SecondTitle from '../components/secondMainTitle';
 
 export default function About() {
 	const { image, mainText, tracks } = animationPropsAbout;
