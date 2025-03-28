@@ -13,3 +13,8 @@ export const animationPropsAbout = {
 	mainText: { Animation: 'zoom-in', Duration: 500, Delay: 0 },
 	tracks: { Animation: 'flip-left', Duration: 600, Delay: 0 },
 };
+
+export const animationPropsEducation = {
+	mainText: { Animation: 'zoom-out', Duration: 300, Delay: 200 },
+	education: { Animation: 'fade-left', Duration: 300 },
+};
