@@ -1,5 +1,5 @@
 // Imports
-import aboutMe_Img from '@assets/images/about-me.jpg';
+import aboutMe_Img from '@assets/images/about-me.webp';
 import SectionTitle from '../components/sectionTitle';
 import ContentTracker from './components/contentTracker';
 import SecondTitle from '../components/secondMainTitle';
@@ -14,7 +14,6 @@ export default function About() {
 	return (
 		<div className="sm:block lg:flex backdrop-blur-[2px] bg-white/5 py-20">
 			{/* Imagen */}
-			{/*La imagen provoca que se trabe medio segundo*/}
 			<aside
 				className="sm:w-full lg:w-160 lg:ml-25 px-5 lg:flex-shrink-0 relative"
 				data-aos={image.Animation}

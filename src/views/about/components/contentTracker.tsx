@@ -1,4 +1,4 @@
-import { TrackerProps } from '@/controllers/visuals/contentTracker';
+import { TrackerProps } from '@/controllers/components/contentTracker';
 
 const ContentTracker: React.FC<TrackerProps> = ({ quantity, text, color }) => {
 	return (

@@ -1,13 +1,17 @@
+//react
+import { useEffect } from 'react';
+
+//animations
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
+//components
 import Navbar from '@/views/components/navbar';
 import Home from '@/views/home/home';
 import ParticlesBackground from '@/views/components/background.js';
-
-import 'aos/dist/aos.css';
-import AOS from 'aos';
-import { useEffect } from 'react';
 import About from './views/about/about';
-import ContactView from './views/contact/contact';
 import EducationView from './views/education/education';
+import ExpertiseView from './views/expertise/expertise';
 
 function App() {
 	useEffect(() => {
@@ -20,7 +24,7 @@ function App() {
 
 			{/* Capa de contenido */}
 			<div className="relative">
-				<header>
+				<header className=" ">
 					<Navbar />
 				</header>
 
@@ -40,11 +44,11 @@ function App() {
 						<EducationView />
 					</section>
 					<section id="soft-skills"></section>
-					<section id="expertise"></section>
-					<section id="projects"></section>
-					<section id="contact" className="mt-500 mb-100">
-						<ContactView />
+					<section id="expertise">
+						<ExpertiseView />
 					</section>
+					<section id="projects"></section>
+					<section id="contact"></section>
 				</main>
 			</div>
 		</div>

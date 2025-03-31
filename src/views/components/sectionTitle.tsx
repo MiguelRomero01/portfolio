@@ -1,4 +1,4 @@
-import { sectionTitleProps } from '@/controllers/visuals/sectionTitle';
+import { sectionTitleProps } from '@/controllers/components/sectionTitle';
 
 const SectionTitle: React.FC<sectionTitleProps> = ({ color, backgroundColor, text }) => {
 	return (
