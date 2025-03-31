@@ -2,7 +2,7 @@
 import { CheckCircle2, CircleAlert } from 'lucide-react';
 
 //models
-import { CardEducationProps } from '@/controllers/visuals/educationCard';
+import { CardEducationProps } from '@/controllers/components/educationCard';
 
 const CardEducation: React.FC<CardEducationProps> = ({
 	title,
