@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import About from './views/about/about';
 import ContactView from './views/contact/contact';
 import EducationView from './views/education/education';
+import ExpertiseView from './views/expertise/expertise';
 
 function App() {
 	useEffect(() => {
