@@ -3,7 +3,7 @@ export const animationPropsHome = {
 	navbar: { Animation: 'fade-down', Duration: 500, Delay: 2500 },
 	techBar: { Animation: 'fade-left', Duration: 500, Delay: 2500 },
 	techBarElements: { Animation: 'zoom-out', Duration: 1300 },
-	socialMedia: { Animation: 'fade-left', Duration: 1200, easing: 'ease-in-sine', Delay: 3500 },
+	socialMedia: { Animation: 'fade-up', Duration: 1200, easing: 'ease-in-sine', Delay: 3500 },
 	buttonAnimated: { Animation: 'fade-up', Duration: 1200, Delay: 3600 },
 };
 
@@ -14,7 +14,12 @@ export const animationPropsAbout = {
 	tracks: { Animation: 'flip-left', Duration: 600, Delay: 0 },
 };
 
+//education section
 export const animationPropsEducation = {
 	mainText: { Animation: 'zoom-out', Duration: 300, Delay: 200 },
-	education: { Animation: 'fade-left', Duration: 300 },
+	education: { Animation: 'flip-right', Duration: 300 },
 };
+
+//soft-skills section
+
+//expertise section

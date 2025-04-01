@@ -67,9 +67,9 @@ export default function EducationView() {
 						data-aos={education.Animation}
 						data-aos-duration={education.Duration}
 						data-aos-delay={index * 200}
+						key={index}
 					>
 						<CardEducation
-							key={index}
 							title={item.title}
 							icon={item.icon}
 							available={item.available}
