@@ -12,6 +12,7 @@ import ParticlesBackground from '@/views/components/background.js';
 import About from './views/about/about';
 import EducationView from './views/education/education';
 import ExpertiseView from './views/expertise/expertise';
+import ContactView from './views/contact/contact';
 
 function App() {
 	useEffect(() => {

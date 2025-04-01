@@ -9,12 +9,18 @@ import CardExpertise from './components/cardExpertise';
 import SectionTitle from '../components/sectionTitle';
 import SecondTitle from '../components/secondMainTitle';
 
+//animations
+import 'aos/dist/aos.css';
+import { animationPropsExpertise } from '@/controllers/animations/animationProps';
+
 export default function ExpertiseView() {
+	const { expertise, mainText } = animationPropsExpertise;
+
 	const infoExpertise = useMemo(
 		() => [
 			{
 				title: 'Web Development',
-				text: 'Creation of modern web applications using various technologies and best practices.',
+				text: 'Development of modern web applications using cutting-edge technologies and industry best practices.',
 				icon: <CodeXml />,
 			},
 			{
@@ -32,7 +38,12 @@ export default function ExpertiseView() {
 	);
 	return (
 		<div>
-			<header className="flex flex-col text-center items-center text-[1rem] mx-5 lg:mx-100">
+			<header
+				className="flex flex-col text-center items-center text-[1rem] mx-5 lg:mx-100"
+				data-aos={mainText.Animation}
+				data-aos-delay={mainText.Delay}
+				data-aos-duration={mainText.Duration}
+			>
 				<SectionTitle text="Expertise" backgroundColor="#4dec9a4f" color="#4dec9ae4" />
 				<SecondTitle title="My Expertise" />
 				<span className="text-white/70">
@@ -44,7 +55,13 @@ export default function ExpertiseView() {
 
 			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-[8%] mt-20">
 				{infoExpertise.map((item, index) => (
-					<CardExpertise icon={item.icon} text={item.text} title={item.title} key={index} />
+					<div
+						data-aos={expertise.Animation}
+						data-aos-delay={index * 200}
+						data-aos-duration={expertise.Duration}
+					>
+						<CardExpertise icon={item.icon} text={item.text} title={item.title} key={index} />
+					</div>
 				))}
 			</section>
 		</div>
