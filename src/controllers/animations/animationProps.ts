@@ -23,3 +23,7 @@ export const animationPropsEducation = {
 //soft-skills section
 
 //expertise section
+export const animationPropsExpertise = {
+	mainText: { Animation: 'fade-up', Duration: 300, Delay: 200 },
+	expertise: { Animation: 'zoom-in', Duration: 300 },
+};
