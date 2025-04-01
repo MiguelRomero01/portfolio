@@ -40,7 +40,9 @@ function App() {
 						<EducationView />
 					</section>
 					<section id="soft-skills"></section>
-					<section id="expertise"></section>
+					<section id="expertise" className="min-h-screen mb-50">
+						<ExpertiseView />
+					</section>
 					<section id="projects"></section>
 					<section id="contact" className="mt-500 mb-100">
 						<ContactView />
