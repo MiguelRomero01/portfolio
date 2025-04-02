@@ -20,8 +20,11 @@ import {
 	Wrench,
 } from 'lucide-react';
 import SecondTitle from '../components/secondMainTitle';
+import { animationPropsSoftSkills } from '@/controllers/animations/animationProps';
 
 export default function SkillsView() {
+	const { skills, mainText } = animationPropsSoftSkills;
+
 	const skillsContent = useMemo(
 		() => [
 			{
@@ -99,13 +102,23 @@ export default function SkillsView() {
 
 	return (
 		<div className="bg-white/5 py-20">
-			<header className="flex flex-col text-center items-center mx-5 lg:mx-100">
+			<header
+				className="flex flex-col text-center items-center mx-5 lg:mx-100"
+				data-aos={mainText.Animation}
+				data-aos-delay={mainText.Delay}
+				data-aos-duration={mainText.Duration}
+			>
 				<SectionTitle text="Soft Skills" backgroundColor="#10a6eb28" color="#10a6ebc2" />
 				<SecondTitle title="Beyond the Code" />
 			</header>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5 lg:mx-30 mt-20">
 				{skillsContent.map((item, index) => (
-					<div className="transition-all hover:scale-105">
+					<div
+						className="transition-all hover:scale-105"
+						data-aos={skills.Animation}
+						data-aos-duratoin={skills.Duration}
+						data-aos-delay={index * 100}
+					>
 						<SkillCard
 							icon={item.icon}
 							percent={item.percent}
