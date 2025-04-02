@@ -17,7 +17,7 @@ import SkillsView from './views/softSkills/softSkills';
 
 function App() {
 	useEffect(() => {
-		AOS.init();
+		AOS.init({ once: true });
 	}, []);
 
 	return (

@@ -21,9 +21,13 @@ export const animationPropsEducation = {
 };
 
 //soft-skills section
+export const animationPropsSoftSkills = {
+	mainText: { Animation: 'fade-up', Duration: 300, Delay: 200 },
+	skills: { Animation: 'zoom-in', Duration: 300 },
+};
 
 //expertise section
 export const animationPropsExpertise = {
-	mainText: { Animation: 'fade-up', Duration: 300, Delay: 200 },
-	expertise: { Animation: 'zoom-in', Duration: 300 },
+	mainText: { Animation: 'fade-up', Duration: 200, Delay: 100 },
+	expertise: { Animation: 'zoom-in', Duration: 200 },
 };
