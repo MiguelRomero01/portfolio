@@ -1,7 +1,7 @@
 //assets
 
 //models
-import { cardExpertiseProps } from '@/controllers/components/cardExpertise';
+import { cardExpertiseProps } from '@/controllers/components/cards/cardExpertise';
 
 const CardExpertise: React.FC<cardExpertiseProps> = ({ icon, text, title }) => {
 	return (

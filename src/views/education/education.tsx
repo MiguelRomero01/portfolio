@@ -2,7 +2,7 @@
 import { Award, School } from 'lucide-react';
 
 //components
-import CardEducation from './components/card';
+import CardEducation from './components/educationCard';
 import SectionTitle from '../components/sectionTitle';
 import SecondTitle from '../components/secondMainTitle';
 

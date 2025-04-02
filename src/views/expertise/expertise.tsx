@@ -44,8 +44,8 @@ export default function ExpertiseView() {
 				data-aos-delay={mainText.Delay}
 				data-aos-duration={mainText.Duration}
 			>
-				<SectionTitle text="Expertise" backgroundColor="#4dec9a4f" color="#4dec9ae4" />
-				<SecondTitle title="My Expertise" />
+				<SectionTitle text="Expertise" backgroundColor="#4dec9a32" color="#4dec9ae4" />
+				<SecondTitle title="What I know & Do" />
 				<span className="text-white/70">
 					Through practice, self-learning and orientation, I've applied various aspects of
 					development to solve different problems. Thanks to these achievements, I've received
