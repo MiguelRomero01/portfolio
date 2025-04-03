@@ -36,6 +36,7 @@ function App() {
 						<Home />
 					</section>
 
+					{/**la seccion about y education provocan que se genere el bar x (se debe corregir)*/}
 					{/*About section*/}
 					<section id="about" className="min-h-screen mb-50">
 						<About />
@@ -45,6 +46,7 @@ function App() {
 					<section id="education" className="min-h-screen mb-50">
 						<EducationView />
 					</section>
+
 					<section id="soft-skills" className="min-h-screen mb-50">
 						<SkillsView />
 					</section>

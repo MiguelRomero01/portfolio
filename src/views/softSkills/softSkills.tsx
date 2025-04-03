@@ -101,7 +101,7 @@ export default function SkillsView() {
 	);
 
 	return (
-		<div className="bg-white/5 py-20">
+		<div className="bg-[#35353528] py-20">
 			<header
 				className="flex flex-col text-center items-center mx-5 lg:mx-100"
 				data-aos={mainText.Animation}
