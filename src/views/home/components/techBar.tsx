@@ -9,6 +9,7 @@ import GitLogo from '@assets/svg/technologies/gits.svg';
 import HtmlLogo from '@assets/svg/technologies/html.svg';
 import ReactLogo from '@assets/svg/technologies/react.svg';
 import TailwindLogo from '@assets/svg/technologies/tailwind.svg';
+import TypescriptLogo from '@assets/svg/technologies/typescript.svg';
 
 import { useEffect, useMemo, useState } from 'react';
 import AOS from 'aos';
@@ -35,6 +36,7 @@ export default function TechBar() {
 			{ name: 'Java', Logo: JavaLogo },
 			{ name: 'PostgreSQL', Logo: PostgreSQL },
 			{ name: 'JavaScript', Logo: JSLogo },
+			{ name: 'Typescript', Logo: TypescriptLogo },
 			{ name: 'Git', Logo: GitLogo },
 			{ name: 'HTML', Logo: HtmlLogo },
 			{ name: 'CSS', Logo: CssLogo },
