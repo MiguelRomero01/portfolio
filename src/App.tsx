@@ -14,6 +14,7 @@ import EducationView from './views/education/education';
 import ExpertiseView from './views/expertise/expertise';
 import ContactView from './views/contact/contact';
 import SkillsView from './views/softSkills/softSkills';
+import ProjectsView from './views/projects/projects';
 
 function App() {
 	useEffect(() => {
@@ -50,11 +51,13 @@ function App() {
 					<section id="soft-skills" className="min-h-screen mb-50">
 						<SkillsView />
 					</section>
-					<section id="expertise" className="min-h-screen mb-50">
+					<section id="expertise" className="min-h-screen">
 						<ExpertiseView />
 					</section>
-					<section id="projects"></section>
-					<section id="contact" className="mt-500 mb-100">
+					<section id="projects" className="min-h-screen mb-50">
+						<ProjectsView />
+					</section>
+					<section id="contact">
 						<ContactView />
 					</section>
 				</main>
