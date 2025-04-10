@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState, useEffect } from 'react';
 
 //models
@@ -17,7 +17,6 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 	techsUsed_Text,
 	linkProject,
 	imageURL,
-	buttonText,
 }) => {
 	const [isAnimating, setIsAnimating] = useState(false);
 
@@ -31,7 +30,7 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 		setIsAnimating(false);
 		// Esperar a que termine la animación antes de cerrar realmente
 		setTimeout(() => {
-			closeDialog();
+			closeDialog(); //nunca va a ser unidefined
 		}, 300); // Debe coincidir con la duración de la animación
 	};
 
@@ -46,7 +45,7 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 			<div className="fixed inset-0 z-10 w-screen overflow-y-auto">
 				<div className="flex min-h-full pt-20 items-center justify-center p-4">
 					<DialogPanel
-						className={`w-full max-w-4xl md:w-4/5 lg:w-3/4 xl:w-2/3 max-h-[90vh] rounded-xl bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] overflow-hidden transform transition-all duration-300 shadow-2xl border border-gray-800/50 ${
+						className={`w-full max-w-4xl md:w-4/5 lg:w-3/4 xl:w-2/3 max-h-[80vh] rounded-xl bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] overflow-hidden transform transition-all duration-300 shadow-2xl border border-gray-800/50 ${
 							isAnimating
 								? 'opacity-100 scale-100 translate-y-0'
 								: 'opacity-0 scale-95 translate-y-4'
@@ -55,7 +54,7 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 						{/* Close button floating on top right */}
 						<button
 							onClick={handleClose}
-							className="absolute top-3 right-3 z-20 bg-white/10 backdrop-blur-md hover:bg-white/15 text-white/70 hover:text-white rounded-full p-2 transition-all duration-200 hover:rotate-90 cursor-pointer"
+							className="absolute top-3 right-3 z-20 bg-white   hover:bg-[#ff5252] text-black hover:text-white rounded-full p-2 transition-all duration-200 hover:rotate-90 cursor-pointer"
 						>
 							<X size={18} />
 						</button>
@@ -79,7 +78,7 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 							<div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-start sm:items-center">
 								<DialogTitle
 									as="h3"
-									className="font-bold text-xl md:text-2xl lg:text-3xl text-white"
+									className="font-bold text-2xl md:text-2xl lg:text-4xl text-white  lg:mb-2"
 								>
 									{title}
 								</DialogTitle>
@@ -124,7 +123,7 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 
 							{/* Project description */}
 							<div className="mt-4 bg-black/20 rounded-lg p-4 max-h-[30vh] md:max-h-[40vh] overflow-y-auto custom-scrollbar">
-								<p className="text-xs md:text-sm/6 text-white/70 leading-relaxed">{fullText}</p>
+								<p className="text-xs md:text-sm/6 text-white/70 lg:text-[0.95rem]">{fullText}</p>
 							</div>
 
 							{/* Technologies used */}
@@ -142,15 +141,6 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 										</span>
 									))}
 								</div>
-							</div>
-
-							<div className="mt-6 flex justify-end items-center">
-								<Button
-									className="inline-flex items-center gap-2 rounded-md bg-white/10 hover:bg-white/20 py-2 px-4 text-xs md:text-sm font-semibold text-white shadow-lg shadow-black/20 focus:outline-none transition-all duration-200 active:scale-95 cursor-pointer"
-									onClick={handleClose}
-								>
-									{buttonText || 'Close'}
-								</Button>
 							</div>
 						</div>
 					</DialogPanel>

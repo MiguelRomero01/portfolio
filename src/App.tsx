@@ -51,7 +51,7 @@ function App() {
 					<section id="soft-skills" className="min-h-screen mb-50">
 						<SkillsView />
 					</section>
-					<section id="expertise" className="min-h-screen mb-50">
+					<section id="expertise" className="min-h-screen">
 						<ExpertiseView />
 					</section>
 					<section id="projects" className="min-h-screen mb-50">
