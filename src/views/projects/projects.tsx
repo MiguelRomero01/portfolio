@@ -1,5 +1,13 @@
 import { useMemo } from 'react';
+
+//components
 import ActionAreaCard from './components/actionAreaCard';
+
+//animations
+import 'aos/dist/aos.css';
+
+//controllers
+import { animationPropsProjects } from '@/controllers/animations/animationProps';
 
 //assets
 //--icons
@@ -17,7 +25,12 @@ import AIprojectImg from '@assets/images/projects/mintic.png';
 import SectionTitle from '../components/sectionTitle';
 import SecondTitle from '../components/secondMainTitle';
 
+
 const ProjectsView = () => {
+	//animations props
+	const {header, project} = animationPropsProjects;
+
+	//Cards information for each card
 	const infoCard = useMemo(
 		() => [
 			{
@@ -53,24 +66,26 @@ const ProjectsView = () => {
 
 	return (
 		<div className="bg-white/5 pt-1 pb-20">
-			<header className="flex flex-col text-center items-center my-20">
+			<header className="flex flex-col text-center items-center my-20" data-aos={header.Animation} data-aos-delay={header.Delay} data-aos-duration={header.Duration}>
 				<SectionTitle text="Projects" backgroundColor="#25a1cb21" color="#25a1cbd0" />
 				<SecondTitle title="Highlighted Projects" />
 			</header>
 			<div className="px-5 lg:px-25 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{infoCard.map((item, index) => (
-					<ActionAreaCard
-						date={item.date}
-						fullText={item.fullText}
-						imageURL={item.imageURL}
-						linkGit={item.linkGit}
-						techsUsed_Text={item.techString}
-						title={item.title}
-						linkProject={item.linkProject}
-						mainText={item.mainText}
-						techsUsed_Icons={item.techsIcons}
-						key={index}
-					/>
+					<div data-aos={project.Animation} data-aos-duration={project.Duration} data-aos-delay={index*100}>
+						<ActionAreaCard
+							date={item.date}
+							fullText={item.fullText}
+							imageURL={item.imageURL}
+							linkGit={item.linkGit}
+							techsUsed_Text={item.techString}
+							title={item.title}
+							linkProject={item.linkProject}
+							mainText={item.mainText}
+							techsUsed_Icons={item.techsIcons}
+							key={index}
+						/>
+					</div>
 				))}
 			</div>
 		</div>

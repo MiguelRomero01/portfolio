@@ -31,3 +31,9 @@ export const animationPropsExpertise = {
 	mainText: { Animation: 'fade-up', Duration: 200, Delay: 100 },
 	expertise: { Animation: 'zoom-in', Duration: 200 },
 };
+
+//projects animation
+export const animationPropsProjects = {
+	header: {Animation: 'fade-up', Duration: 200, Delay: 100},
+	project: {Animation: 'flip-left', Duration: 200,},
+};
