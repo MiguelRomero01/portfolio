@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 //components
 import ContactInput from './components/input';
@@ -10,8 +10,11 @@ import { FormDataType, personalInfo, affairInfo } from '@/config/formConfig';
 //styles
 import fontStyle from '@assets/fonts.module.css';
 import SocialMedia from './components/socialMedia';
+import recieveEmails from '@/config/recieveEmails';
 
 export default function ContactView() {
+	const form = useRef<HTMLFormElement>(null);
+
 	const initialFormState: FormDataType = {
 		name: '',
 		email: '',
@@ -29,9 +32,7 @@ export default function ContactView() {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
-		setIsSubmitted(true);
-		setTimeout(() => setIsSubmitted(false), 3000);
+		recieveEmails(form, setIsSubmitted);
 		setFormData(initialFormState);
 	};
 
@@ -47,7 +48,11 @@ export default function ContactView() {
 			</header>
 
 			{/*User Form*/}
-			<form onSubmit={handleSubmit} className="lg:px-15 py-10 bg-white -mt-15 lg:mx-3 rounded-3xl">
+			<form
+				ref={form}
+				onSubmit={handleSubmit}
+				className="lg:px-15 py-10 bg-white -mt-15 lg:mx-3 rounded-3xl"
+			>
 				{/*Peronsal Information: email and name*/}
 				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
 					{personalInfo.map((input, index) => (
