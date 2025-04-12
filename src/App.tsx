@@ -57,7 +57,7 @@ function App() {
 					<section id="projects" className="min-h-screen mb-50">
 						<ProjectsView />
 					</section>
-					<section id="contact">
+					<section id="contact" className="min-h-screen mb-0">
 						<ContactView />
 					</section>
 				</main>
