@@ -1,39 +1,35 @@
 export const personalInfo = [
-      {
-            id: 'name',
-            name: 'name',
-            type: 'text',
-            placeholder: 'Name',
-            label: 'Name',
-            required: true,
-      },
-      {
-            id: 'email',
-            name: 'email',
-            type: 'email',
-            placeholder: 'Email',
-            label: 'Email',
-            required: true,
-      },
-]
+	{
+		id: 'name',
+		name: 'Name',
+		type: 'text',
+		placeholder: 'Your Name',
+		required: true,
+	},
+	{
+		id: 'email',
+		name: 'E-mail',
+		type: 'email',
+		placeholder: 'Example@gmail.com',
+		required: true,
+	},
+] as const;
 
 export const affairInfo = [
-      {
-            id: 'subject',
-            name: 'subject',
-            type: 'text',
-            placeholder: "What's the topic of your message?",
-            label: 'Subject',
-            required: true,
-      },
-      {
-            id: 'message',
-            name: 'message',
-            type: 'text',
-            placeholder: 'Tell me more details',
-            label: 'Message',
-            required: true,
-      },
+	{
+		id: 'subject',
+		name: 'Subject',
+		type: 'text',
+		placeholder: "What's the topic of your message?",
+		required: true,
+	},
+	{
+		id: 'message',
+		name: 'Message',
+		type: 'text',
+		placeholder: 'Tell me more details',
+		required: true,
+	},
 ] as const;
 
 export type FormDataType = {

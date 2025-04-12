@@ -5,7 +5,6 @@ import styleFonts from '@assets/fonts.module.css';
 import { ArrowRight } from 'lucide-react';
 
 //components
-import SocialMedia from './components/socialMedia';
 import TechBar from './components/techBar';
 
 //aniamtion
@@ -90,8 +89,6 @@ export default function Home() {
 					</div>
 				)}
 			</div>
-
-			<SocialMedia />
 		</>
 	);
 }
