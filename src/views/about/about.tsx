@@ -15,12 +15,14 @@ export default function About() {
 		<div className="sm:block lg:flex backdrop-blur-[2px] bg-white/5 py-20">
 			{/* Imagen */}
 			<aside
-				className="sm:w-full lg:w-160 lg:ml-25 px-5 lg:flex-shrink-0 relative"
+				className="w-full lg:w-160 lg:ml-25 px-5 lg:flex-shrink-0 relative"
 				data-aos={image.Animation}
 				data-aos-delay={image.Delay}
 				data-aos-duration={image.Duration}
 			>
-				<div className="absolute -inset-2 rounded-4xl bg-gradient-to-r from-purple-500 to-pink-500 blur-lg opacity-18"></div>
+				{/*se modifica el fondo de la imagen */}
+				{/*se modifica el absolute para que no afecte a moviles y tablets*/}
+				<div className="lg:absolute -inset-2 rounded-4xl bg-gradient-to-r from-purple-500 to-pink-500 blur-lg opacity-18"></div>
 				<img src={aboutMe_Img} className="relative rounded-4xl shadow-2xl" />
 			</aside>
 
@@ -33,7 +35,7 @@ export default function About() {
 				>
 					<SectionTitle color="#e8e" backgroundColor="rgba(238, 51, 238, 0.150)" text="About Me" />
 					<SecondTitle title="Passionate about technology and learning" />
-					<p className="text-gray-400 text-[1.1rem]">
+					<p className="text-gray-400 text-[1rem]">
 						Hi, I'm Miguel Romero, a 19-year-old software engineering student. Throughout my
 						studies, I've worked on multiple projects that have allowed me to deepen my
 						understanding of technologies, software architecture, and teamwork.

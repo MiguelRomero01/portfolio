@@ -36,28 +36,28 @@ function App() {
 					<section id="home" className="flex justify-center min-h-screen pt-15 mb-10">
 						<Home />
 					</section>
-
-					{/**la seccion about y education provocan que se genere el bar x (se debe corregir)*/}
 					{/*About section*/}
-					<section id="about" className="min-h-screen mb-50">
+					<section id="about" className="min-h-screen mb-40">
 						<About />
 					</section>
-
-					{/*expertise section*/}
-					<section id="education" className="min-h-screen mb-50">
+					{/* expertise section */}
+					<section id="education" className="min-h-screen mb-20 pt-20">
 						<EducationView />
 					</section>
-
-					<section id="soft-skills" className="min-h-screen mb-50">
+					{/* soft skills section */}
+					<section id="soft-skills" className="min-h-screen mb-20">
 						<SkillsView />
 					</section>
-					<section id="expertise" className="min-h-screen">
+					{/* expertise section */}
+					<section id="expertise" className="min-h-screen pt-20">
 						<ExpertiseView />
 					</section>
-					<section id="projects" className="min-h-screen mb-50">
+					{/* projects section */}
+					<section id="projects" className="min-h-screen mb-10">
 						<ProjectsView />
 					</section>
-					<section id="contact" className="min-h-screen mb-0">
+					{/* contact section */}
+					<section id="contact" className="min-h-screen mb-5 pt-20">
 						<ContactView />
 					</section>
 				</main>
