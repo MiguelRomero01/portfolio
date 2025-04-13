@@ -30,7 +30,9 @@ const DialogWindow: React.FC<ActionAreaCardProps> = ({
 		setIsAnimating(false);
 		// Esperar a que termine la animación antes de cerrar realmente
 		setTimeout(() => {
-			closeDialog(); //nunca va a ser unidefined
+			if (closeDialog) {
+				closeDialog();
+			}
 		}, 300); // Debe coincidir con la duración de la animación
 	};
 
