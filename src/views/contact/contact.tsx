@@ -23,7 +23,8 @@ export default function ContactView() {
 	};
 
 	const [formData, setFormData] = useState<FormDataType>(initialFormState);
-	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
@@ -33,6 +34,7 @@ export default function ContactView() {
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		recieveEmails(form, setIsSubmitted);
+		setIsLoading(true);
 		setFormData(initialFormState);
 	};
 
@@ -90,7 +92,7 @@ export default function ContactView() {
 				</div>
 
 				<div>
-					<SubmitButton isSubmitted={isSubmitted} />
+					<SubmitButton isSubmitted={isSubmitted} isLoading={isLoading} />
 				</div>
 			</form>
 
