@@ -37,13 +37,13 @@ export default function ContactView() {
 	};
 
 	return (
-		<div className="rounded-4xl lg:mx-60 bg-[#e1e1e1]">
+		<div className="rounded-4xl lg:mx-60 bg-[#e1e1e1] mx-3">
 			<header className="text-center bg-gradient-to-r from-[#6366F1] to-[#8450fd]  rounded-t-4xl text-white pt-6 pb-20">
-				<h1 className="lg:text-[2.5rem] font-bold pb-3" id={fontStyle.MainTitle}>
-					Let's contact us
+				<h1 className="lg:text-[2.5rem] font-bold pb-3 text-2xl" id={fontStyle.MainTitle}>
+					Shall we get in touch?
 				</h1>
-				<p className="lg:text-[1.2rem] lg:px-50 text-gray-200/85">
-					I'm waiting for your messange! Complete this form and I'll answer as soon as possible
+				<p className="text-[0.9rem] lg:text-[1.2rem] px-5 lg:px-50 text-gray-200/85">
+					I'm waiting for your message! Complete this form and I'll answer as soon as possible
 				</p>
 			</header>
 
@@ -51,10 +51,10 @@ export default function ContactView() {
 			<form
 				ref={form}
 				onSubmit={handleSubmit}
-				className="lg:px-15 py-10 bg-white -mt-15 lg:mx-3 rounded-3xl"
+				className="px-5 lg:px-15 py-10 bg-white -mt-15 lg:mx-3 rounded-3xl"
 			>
 				{/*Peronsal Information: email and name*/}
-				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
+				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-10 ">
 					{personalInfo.map((input, index) => (
 						<>
 							<ContactInput
@@ -74,7 +74,7 @@ export default function ContactView() {
 				{/*Subject and message*/}
 				<div className="mt-8">
 					{affairInfo.map((input, index) => (
-						<div className="mb-5">
+						<div className="mb-3 lg:mb-5">
 							<ContactInput
 								handleChange={handleChange}
 								id={input.id}
@@ -94,9 +94,11 @@ export default function ContactView() {
 				</div>
 			</form>
 
-			<footer className="pt-4 pb-6 flex lg:px-10">
-				<p className="text-gray-600 text-[1.1rem]">© 2025 Miguel Romero | Portfolio</p>
-				<div className="justify-end ml-auto ">
+			<footer className="pt-4 pb-6 md:flex px-10">
+				<p className="text-gray-600 text-[0.8rem] lg:text-[1.1rem]">
+					© 2025 Miguel Romero | Portfolio
+				</p>
+				<div className="md:justify-end md:ml-auto pt-2 ">
 					<SocialMedia />
 				</div>
 			</footer>

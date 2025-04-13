@@ -32,6 +32,7 @@ export const affairInfo = [
 	},
 ] as const;
 
+//input fields
 export type FormDataType = {
     name: string;
     email: string;
