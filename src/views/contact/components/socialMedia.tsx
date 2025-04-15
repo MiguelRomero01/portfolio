@@ -25,7 +25,7 @@ export default function SocialMedia() {
 						src={item.Icon}
 						title={item.label}
 						alt={item.label}
-						className="size-5 hover:size-5.5 transition-all ease-in duration-100"
+						className="size-5 hiver:size-5.5 md:size-6 md:hover:size-6.5 transition-all ease-in duration-100"
 					/>
 				</a>
 			))}

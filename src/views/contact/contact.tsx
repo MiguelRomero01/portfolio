@@ -47,6 +47,9 @@ export default function ContactView() {
 				<p className="text-[0.9rem] lg:text-[1.2rem] px-5 lg:px-50 text-gray-200/85">
 					I'm waiting for your message! Complete this form and I'll answer as soon as possible
 				</p>
+				<div className="pt-4 place-self-center">
+					<SocialMedia />
+				</div>
 			</header>
 
 			{/*User Form*/}
@@ -100,9 +103,6 @@ export default function ContactView() {
 				<p className="text-gray-600 text-[0.8rem] lg:text-[1.1rem]">
 					© 2025 Miguel Romero | Portfolio
 				</p>
-				<div className="md:justify-end md:ml-auto pt-2 ">
-					<SocialMedia />
-				</div>
 			</footer>
 		</div>
 	);

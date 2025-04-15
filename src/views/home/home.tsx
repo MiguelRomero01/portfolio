@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 
 //assets
 import styleFonts from '@assets/fonts.module.css';
-import { ArrowRight } from 'lucide-react';
+import { Download } from 'lucide-react';
+import CV from '@assets/files/HVMiguelRomero_softwareDeveloper .pdf';
 
 //components
 import TechBar from './components/techBar';
 
-//aniamtion
+//animation
 import 'aos/dist/aos.css';
 import { animationPropsHome } from '@/controllers/animations/animationProps';
-import { Link } from 'react-scroll';
 
 export default function Home() {
 	const [isDivVisible, setIsDivVisible] = useState<boolean>(false);
@@ -70,22 +70,16 @@ export default function Home() {
 				{/* get started button */}
 				{isDivVisible && (
 					<div className="flex justify-center py-5">
-						<Link
-							to="about"
-							smooth={true}
-							duration={500}
-							offset={-50}
-							className="flex items-center space-x-2"
-						>
+						<a className="flex items-center space-x-2" href={CV} target="_blank">
 							<button
 								data-aos={animationPropsHome.buttonAnimated.Animation}
 								data-aos-duration={animationPropsHome.buttonAnimated.Duration}
-								className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+								className="gap-2 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-2xl font-semibold py-3 px-6 rounded-full flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
 							>
-								Get Started
-								<ArrowRight />
+								Download CV
+								<Download />
 							</button>
-						</Link>
+						</a>
 					</div>
 				)}
 			</div>
