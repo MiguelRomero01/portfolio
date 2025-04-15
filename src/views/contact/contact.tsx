@@ -10,7 +10,7 @@ import { FormDataType, personalInfo, affairInfo } from '@/config/formConfig';
 //styles
 import fontStyle from '@assets/fonts.module.css';
 import SocialMedia from './components/socialMedia';
-import recieveEmails from '@/config/recieveEmails';
+import recieveEmails from '@/controllers/components/recieveEmails';
 
 export default function ContactView() {
 	const form = useRef<HTMLFormElement>(null);
@@ -61,7 +61,7 @@ export default function ContactView() {
 				{/*Peronsal Information: email and name*/}
 				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-10 ">
 					{personalInfo.map((input, index) => (
-						<>
+						<div key={index}>
 							<ContactInput
 								handleChange={handleChange}
 								id={input.id}
@@ -69,17 +69,16 @@ export default function ContactView() {
 								placeholder={input.placeholder}
 								required={input.required}
 								type={input.type}
-								key={index}
 								value={formData[input.name as keyof FormDataType] as keyof FormDataType}
 							/>
-						</>
+						</div>
 					))}
 				</div>
 
 				{/*Subject and message*/}
 				<div className="mt-8">
 					{affairInfo.map((input, index) => (
-						<div className="mb-3 lg:mb-5">
+						<div className="mb-3 lg:mb-5" key={index}>
 							<ContactInput
 								handleChange={handleChange}
 								id={input.id}
@@ -87,7 +86,6 @@ export default function ContactView() {
 								placeholder={input.placeholder}
 								required={input.required}
 								type={input.type}
-								key={index}
 								value={formData[input.name as keyof FormDataType] as keyof FormDataType}
 							/>
 						</div>

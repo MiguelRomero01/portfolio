@@ -118,13 +118,13 @@ export default function SkillsView() {
 						data-aos={skills.Animation}
 						data-aos-duratoin={skills.Duration}
 						data-aos-delay={index * 100}
+						key={index}
 					>
 						<SkillCard
 							icon={item.icon}
 							percent={item.percent}
 							text={item.text}
 							title={item.title}
-							key={index}
 						/>
 					</div>
 				))}

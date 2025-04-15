@@ -59,8 +59,9 @@ export default function ExpertiseView() {
 						data-aos={expertise.Animation}
 						data-aos-delay={index * 200}
 						data-aos-duration={expertise.Duration}
+						key={index}
 					>
-						<CardExpertise icon={item.icon} text={item.text} title={item.title} key={index} />
+						<CardExpertise icon={item.icon} text={item.text} title={item.title} />
 					</div>
 				))}
 			</section>

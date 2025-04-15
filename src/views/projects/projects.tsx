@@ -66,13 +66,23 @@ const ProjectsView = () => {
 
 	return (
 		<div className="bg-white/5 pt-1 pb-20">
-			<header className="flex flex-col text-center items-center my-20" data-aos={header.Animation} data-aos-delay={header.Delay} data-aos-duration={header.Duration}>
+			<header
+				className="flex flex-col text-center items-center my-20"
+				data-aos={header.Animation}
+				data-aos-delay={header.Delay}
+				data-aos-duration={header.Duration}
+			>
 				<SectionTitle text="Projects" backgroundColor="#25a1cb21" color="#25a1cbd0" />
 				<SecondTitle title="Highlighted Projects" />
 			</header>
 			<div className="px-5 lg:px-25 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{infoCard.map((item, index) => (
-					<div data-aos={project.Animation} data-aos-duration={project.Duration} data-aos-delay={index*100}>
+					<div
+						data-aos={project.Animation}
+						data-aos-duration={project.Duration}
+						data-aos-delay={index * 100}
+						key={index}
+					>
 						<ActionAreaCard
 							date={item.date}
 							fullText={item.fullText}
@@ -83,7 +93,6 @@ const ProjectsView = () => {
 							linkProject={item.linkProject}
 							mainText={item.mainText}
 							techsUsed_Icons={item.techsIcons}
-							key={index}
 						/>
 					</div>
 				))}
