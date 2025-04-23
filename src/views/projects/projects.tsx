@@ -17,18 +17,20 @@ import cssIcon from '@assets/svg/technologies/css3.svg';
 import gitIcon from '@assets/svg/technologies/gits.svg';
 import PythonIcon from '@assets/svg/technologies/python.svg';
 import JupyterIcon from '@assets/svg/technologies/jupyter.svg';
+import TensorFlowIcon from '@assets/svg/technologies/tensorflow.svg';
+import PandasIcon from '@assets/svg/technologies/pandas.svg';
 
 //--images
 import EcommerceImg from '@assets/images/projects/e-commerce.png';
 import AIprojectImg from '@assets/images/projects/mintic.png';
+import BrainCancerImg from '@assets/images/projects/AI-project.png';
 
 import SectionTitle from '../components/sectionTitle';
 import SecondTitle from '../components/secondMainTitle';
 
-
 const ProjectsView = () => {
 	//animations props
-	const {header, project} = animationPropsProjects;
+	const { header, project } = animationPropsProjects;
 
 	//Cards information for each card
 	const infoCard = useMemo(
@@ -56,9 +58,22 @@ const ProjectsView = () => {
 				imageURL: AIprojectImg,
 				date: '2024-12-09',
 				techString: ['Jupyter', 'Python', 'Pandas', 'TensorFlow', 'Git'],
-				techsIcons: [PythonIcon, JupyterIcon, gitIcon],
+				techsIcons: [PythonIcon, JupyterIcon, PandasIcon, gitIcon],
 				linkProject:
 					'https://colab.research.google.com/drive/1RmcTGj-KQYvCbNnUyDOuvxyEMN242Q4z?usp=sharing',
+			},
+			{
+				title: 'Brain Cancer Detection with AI',
+				mainText:
+					'Development of an AI-based model capable of predicting the presence of brain cancer using MRI',
+				fullText:
+					'The project focuses on building an Artificial Intelligence model to detect different types of brain cancer using magnetic resonance imaging (MRI), classifing them into four categories: Glioma, Meningioma, Other Tumor, and No Tumor. The model achieved an accuracy of over 85% on the test set, demonstrating its effectiveness. To enhance the model’s generalization and performance, I implemented data augmentation techniques to artificially expand the training dataset.',
+				imageURL: BrainCancerImg,
+				date: '2025-20-04',
+				techString: ['Python', 'Keras', 'TensorFlow', 'Jupyter'],
+				techsIcons: [PythonIcon, JupyterIcon, TensorFlowIcon],
+				linkProject:
+					'https://colab.research.google.com/drive/1qn620Jqtya4ld5x85qmxetI3b_ldtOfN#scrollTo=NbQ6rod0_MYq',
 			},
 		],
 		[]

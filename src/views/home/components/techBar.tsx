@@ -3,7 +3,7 @@ import PythonLogo from '@assets/svg/technologies/python.svg';
 import JavaLogo from '@assets/svg/technologies/java.svg';
 import JSLogo from '@assets/svg/technologies/js.svg';
 import PostgreSQL from '@assets/svg/technologies/postgresql.svg';
-import JupyterLogo from '@assets/svg/technologies/jupyter.svg';
+import TensorFlowLogo from '@assets/svg/technologies/tensorflow.svg';
 import CssLogo from '@assets/svg/technologies/css3.svg';
 import GitLogo from '@assets/svg/technologies/gits.svg';
 import HtmlLogo from '@assets/svg/technologies/html.svg';
@@ -42,7 +42,7 @@ export default function TechBar() {
 			{ name: 'CSS', Logo: CssLogo },
 			{ name: 'React', Logo: ReactLogo },
 			{ name: 'Tailwind', Logo: TailwindLogo },
-			{ name: 'Jupyter', Logo: JupyterLogo },
+			{ name: 'TensorFlow', Logo: TensorFlowLogo },
 		],
 		[]
 	);

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 //assets
 import styleFonts from '@assets/fonts.module.css';
 import { Download } from 'lucide-react';
-import CV from '@assets/files/HVMiguelRomero_softwareDeveloper .pdf';
+import CV from '@assets/files/CVMiguelRomero_SoftwareDeveloper .pdf';
 
 //components
 import TechBar from './components/techBar';
