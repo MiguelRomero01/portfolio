@@ -18,7 +18,7 @@ import gitIcon from '@assets/svg/technologies/gits.svg';
 import PythonIcon from '@assets/svg/technologies/python.svg';
 import JupyterIcon from '@assets/svg/technologies/jupyter.svg';
 import TensorFlowIcon from '@assets/svg/technologies/tensorflow.svg';
-import PandasIcon from '@assets/svg/technologies/pandas.svg';
+import PandasIcon from '@assets/svg/technologies/Pandas.svg';
 
 //--images
 import EcommerceImg from '@assets/images/projects/e-commerce.png';
